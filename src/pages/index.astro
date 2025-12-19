@@ -1,0 +1,93 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Card from '../components/Card.astro';
+---
+
+<MainLayout title="Luis Fleisher | UI/UX Designer & Frontend Developer">
+	<section class="flex flex-col md:flex-row items-center justify-between gap-10 mt-20">
+		<div class="text-center md:text-left flex-1">
+			<h1 class="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent italic">
+				¡Hola, soy Luis Fleisher!
+			</h1>
+			<p class="mt-6 text-xl text-slate-300 max-w-2xl">
+				Especialista en <span class="text-blue-400 font-semibold">Diseño Visual y Experiencia de Usuario</span>. 
+				Transformo ideas complejas en interfaces digitales impecables, desde el lienzo en Figma hasta el código final.
+			</p>
+			<div class="mt-8 flex gap-4 justify-center md:justify-start">
+				<a href="#proyectos" class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-full font-semibold transition">
+					Ver Proyectos Visuales
+				</a>
+				<a href="https://github.com/Fleisher21" target="_blank" class="border border-slate-700 hover:bg-slate-800 px-6 py-3 rounded-full font-semibold transition">
+					GitHub
+				</a>
+			</div>
+		</div>
+
+		<div class="flex-shrink-0">
+			<img 
+				src="/fotocurrifleisher.jpeg" 
+				alt="Foto de Luis Fleisher" 
+				class="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover border-4 border-blue-500 shadow-xl shadow-blue-500/20"
+			/>
+		</div>
+	</section>
+
+	<section class="py-24 border-t border-slate-800 mt-20">
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+			<div class="md:col-span-2">
+				<h2 class="text-3xl font-bold mb-6 text-blue-400">Mi Enfoque: Estética y Función</h2>
+				<p class="text-slate-300 text-lg leading-relaxed">
+					Mi fuerte es la <strong class="text-blue-300 text-xl block mt-2">Creación Visual Integral.</strong>
+					<br/>
+					Me especializo en diseñar identidades digitales que cautivan. Ya sea en **Figma, aplicaciones móviles o sitios web**, mi objetivo es que cada pixel tenga un propósito. No solo diseño pantallas; construyo experiencias donde la estética potencia la usabilidad.
+					<br/><br/>
+					Como ingeniero, tengo la ventaja competitiva de entender cómo se construye lo que diseño, facilitando la transición perfecta del diseño al producto final.
+				</p>
+			</div>
+
+			<div class="bg-slate-800/40 border border-blue-500/30 p-6 rounded-2xl shadow-lg">
+				<h3 class="text-xl font-bold mb-4 flex items-center gap-2 text-white">
+					<span>🚀</span> Skills de Alto Impacto
+				</h3>
+				<ul class="space-y-4">
+					<li class="flex flex-col">
+						<span class="text-blue-300 font-semibold text-sm uppercase tracking-wider">UI/UX & Prototyping</span>
+						<span class="text-slate-400 text-sm italic">Figma, Adobe Suite, Diseño Atómico</span>
+					</li>
+					<li class="flex flex-col border-t border-slate-700/50 pt-2">
+						<span class="text-blue-300 font-semibold text-sm uppercase tracking-wider">Desarrollo Visual</span>
+						<span class="text-slate-400 text-sm">Tailwind CSS, Astro, Landing Pages</span>
+					</li>
+					<li class="flex flex-col border-t border-slate-700/50 pt-2 text-xs opacity-80">
+						<span class="text-slate-400 font-semibold uppercase tracking-wider italic">Complementos Técnicos</span>
+						<span class="text-slate-500 italic">Java Programming (Oracle) & Machine Learning</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<section id="proyectos" class="py-20">
+		<h2 class="text-3xl font-bold mb-10 text-blue-400 text-center italic">Portafolio de Diseño y Desarrollo</h2>
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+			<Card 
+				title="Figma UI/UX: Prototipado y Rediseño" 
+				description="Mi proyecto principal de diseño. Reestructuración visual completa y creación de sistemas de diseño para aplicaciones escalables." 
+				tech={["Figma", "UI/UX Design", "Hand-off"]}
+				href="https://github.com/Fleisher21/Portafolio-evidencias" 
+			/>
+			<Card 
+				title="TheInstituteBarber" 
+				description="Interfaz premium de barbería. Un ejemplo de cómo un diseño visual potente eleva la percepción de una marca local." 
+				tech={["Visual Design", "Tailwind CSS", "Responsive"]}
+				href="https://github.com/Fleisher21/Portafolio-evidencias"
+			/>
+			<Card 
+				title="Portafolio Profesional con Astro" 
+				description="Presentación personal diseñada con un enfoque minimalista y oscuro para resaltar mi trabajo visual." 
+				tech={["Astro", "Tailwind CSS", "UI Design"]}
+				href="https://github.com/Fleisher21"
+			/>
+		</div>
+	</section>
+</MainLayout>
